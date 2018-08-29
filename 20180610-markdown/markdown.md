@@ -113,11 +113,11 @@ Links are also auto-detected in text: http://example.com/
 
 # 图片引用
 
-![](/path/to/image.jpg)
+![](www.baidu.com/img/bd_logo1.png)
 
-![Alt text](/path/to/image.png "Title")
+![Alt text](www.baidu.com/img/bd_logo1.png "Title")
 
-[![Alt text](/url/to/image.jpg "该图片带有链接")](http://example.com/)
+[![Alt text](www.baidu.com/img/bd_logo1.png "该图片带有链接")](http://www.baidu.com/)
 
 # 表格
 
