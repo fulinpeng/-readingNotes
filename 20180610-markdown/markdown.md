@@ -115,9 +115,9 @@ Links are also auto-detected in text: http://example.com/
 
 ![](www.baidu.com/img/bd_logo1.png)
 
-![Alt text](www.baidu.com/img/bd_logo1.png "Title")
+![Alt text](http://www.baidu.com/img/bd_logo1.png "Title")
 
-[![Alt text](www.baidu.com/img/bd_logo1.png "该图片带有链接")](http://www.baidu.com/)
+[![Alt text](http://www.baidu.com/img/bd_logo1.png "该图片带有链接")](http://www.baidu.com/)
 
 # 表格
 
