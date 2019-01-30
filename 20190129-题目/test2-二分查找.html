@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 一个简单的二分查找
+        // arr必须是有序的
+        function binaryFind(arr, num, start, end) {
+            start = start || 0;
+            end = end || arr.length;
+            var mid = Math.floor((start + end) / 2);
+            var midVal = arr[mid];
+            if (start >= end) {
+                return false;
+            }
+            if (midVal === num) {
+                return 'arr[' + mid + '] = ' + midVal;
+            } else {
+                if (midVal > num) {
+                    return binaryFind(arr, num, 0, mid);
+                } else {
+                    return binaryFind(arr, num, mid + 1);
+                }
+            }
+        }
+        
+        binaryFind([1,2,3,4,5,6,7,8,9,10], 8);
+
+    </script>
+</body>
+
+</html>

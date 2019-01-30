@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        function getParams(url) {
+            // var paramsStr = /(.*\?)(\w\=\w\&)*(\w\=\w)?$/g.exec(url);
+            // console.log('paramsStr:', paramsStr);
+            // 用正则失败，可能写错了吧
+            var paramsArr = url.split('?');
+            var params = {};
+            if (paramsArr.length < 2) return params;  // note
+            paramsArr = paramsArr[1].split('&');
+            paramsArr.map((v) => {
+                var arr = v.split('=');
+                params[arr[0]] = arr.length > 1 ? arr[1] : undefined; // note
+            });
+            return params;
+        }
+        getParams('https://segmentfault.com?a=1&b=2&c=3');
+        
+    </script>
+</body>
+
+</html>
