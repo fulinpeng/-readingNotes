@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../dailyPractice/js/jquery-2.0.0.js"></script>
+</head>
+<body>
+    <div class="test1">hello jquery!</div>
+    <script>
+        // ownerDocument和 documentElement的区别：
+        // ownerDocument是Node对象的一个属性，返回的是某个元素的根节点文档对象：即document对象
+        // documentElement是Document对象的属性，返回的是文档根节点
+        // 对于HTML文档来说，documentElement是<html>标签对应的Element对象，ownerDocument是document对象
+        console.log('ownerDocument:', $('.test1').get(0).ownerDocument);
+        console.log('documentElement:', document.documentElement);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../dailyPractice/js/jquery-2.0.0.js"></script>
+</head>
+
+<body>
+    <div class="test1">hello jquery!</div>
+    <script>
+        function Aaron(List, callback) {
+            setTimeout(function () {
+                var task = List.shift();
+                if (task) task(); //执行函数
+                if (List.length > 0) {  //递归分解
+                    setTimeout(arguments.callee, 1000)
+                } else {
+                    callback()
+                }
+            }, 25)
+        }
+
+        Aaron([function () {
+            console.log('a')
+        }, function () {
+            console.log('b')
+        }, function () {
+            console.log('c')
+        }], function () {
+            console.log('callback')
+        });
+    </script>
+</body>
+
+</html>

@@ -13,12 +13,15 @@
         提示内容！
     </p>
     <script>
+        // http://worried-k.github.io/myblog/2017/03/18/web-cache-about-cookie.html
+        
         function setcookie(name, value, days) { //给cookie增加一个时间变量
 
             var exp = new Date();
             exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000); //设置过期时间为days天
 
             document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+            // 废弃的 escape() 方法生成新的由十六进制转义序列替换的字符串. 使用 encodeURI 或 encodeURIComponent 代替
         }
 
         function getCookie(name) {
@@ -27,7 +30,7 @@
             var searchName = name + "=";
             var startOfCookie = myCookie.indexOf(searchName);
             var endOfCookie;
-            if (satrtOfCookie != -1) {
+            if (startOfCookie != -1) {
                 startOfcookie += searchName.length;
                 endOfCookie = myCookie.indexOf(";", startOfCookie);
                 result = (myCookie.substring(startOfCookie, endOfCookie));
